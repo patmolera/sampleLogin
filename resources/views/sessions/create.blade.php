@@ -10,7 +10,7 @@
 
         <div class="form-group">
           <label for="email">Email Address:</label>
-          <input type="text" class="form-control" name="email" id="email">
+          <input type="email" class="form-control" name="email" id="email">
         </div>
 
         <div class="form-group">
@@ -19,9 +19,8 @@
         </div>
 
         <div class="form-group">
-          <button type="button" class="btn btn-primary" name="button">Sign In</button>
+          <button type="submit" class="btn btn-primary" name="submit">Sign In</button>
         </div>
-
         @include('layouts.errors')
       </form>
   </div>

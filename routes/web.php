@@ -10,8 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function(){
+  return view('layouts.welcome');
+});
 
-Route::get('/','HomepageController@index')->name('home');
+Route::get('/dashboard','HomeController@index')->name('home');
 
 Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');
@@ -19,3 +22,7 @@ Route::post('/register', 'RegistrationController@store');
 Route::get('/login', 'SessionsController@create');
 Route::post('/login', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy');
+
+// Route::get('/password-reset','ForgotPasswordController');
+
+// Auth::routes();
